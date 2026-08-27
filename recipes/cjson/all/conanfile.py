@@ -58,7 +58,7 @@ class CjsonConan(ConanFile):
         tc = CMakeToolchain(self)
         tc.variables["ENABLE_SANITIZERS"] = False
         tc.variables["ENABLE_SAFE_STACK"] = False
-        tc.variables["ENABLE_PUBLIC_SYMBOLS"] = True
+        tc.variables["ENABLE_PUBLIC_SYMBOLS"] = self.options.shared
         tc.variables["ENABLE_HIDDEN_SYMBOLS"] = False
         tc.variables["ENABLE_TARGET_EXPORT"] = False
         tc.variables["BUILD_SHARED_AND_STATIC_LIBS"] = False
